@@ -1,8 +1,18 @@
 from fedora
 
-RUN dnf -y install make automake gcc-c++ cmake git gcovr \
+# Install required packages.
+RUN dnf -y install make automake gcc-c++ cmake git gcovr ruby \
     && dnf clean all
 
+# Install NormEZ.
+RUN git clone https://github.com/ronanboiteau/NormEZ NormEZ \
+    && cd NormEZ \
+    && mv NormEZ.rb /usr/local/bin/normez \
+    && cd .. \
+    && rm -rf NormEZ \
+    && chmod +x /usr/local/bin/normez
+
+# Install Criterion.
 RUN git clone --recursive https://github.com/Snaipe/Criterion criterion \
     && cd criterion \
     && mkdir build \
