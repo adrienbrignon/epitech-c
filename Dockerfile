@@ -1,7 +1,8 @@
 from fedora
 
-# Install required packages.
+# Install required packages and dependencies.
 RUN dnf -y install make automake gcc-c++ cmake git gcovr ruby \
+                   ncurses-devel \
     && dnf clean all
 
 # Install NormEZ.
