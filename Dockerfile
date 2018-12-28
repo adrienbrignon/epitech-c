@@ -1,7 +1,7 @@
 from fedora
 
 # Install required packages and dependencies.
-RUN dnf -y install make automake gcc-c++ cmake git gcovr ruby \
+RUN dnf -y install make automake gcc-c++ cmake git gcovr ruby findutils \
                    ncurses-devel \
     && dnf clean all
 
