@@ -1,11 +1,11 @@
 from fedora
 
 # Install required packages and dependencies.
-RUN dnf -y install \
-        make automake gcc-c++ cmake git gcovr ruby findutils valgrind \
-        expect ncurses-devel freetype-devel libX11-devel libXrandr-devel \
-        libudev-devel flac-devel libogg-devel libglvnd-glx libvorbis-devel \
-        openal-soft-devel libglvnd-glx mesa-libGL-devel \
+RUN dnf -y install --allowerasing \
+        make automake gcc-c++ cmake git gcovr ruby findutils valgrind expect \
+        ncurses-devel ncurses-compat-libs freetype-devel libXrandr-devel \
+        libX11-devel libudev-devel libogg-devel libglvnd-glx libvorbis-devel \
+        flac-devel openal-soft-devel libglvnd-glx mesa-libGL-devel \
     && dnf clean all
 
 # Add local shared libraries to system library path.
@@ -44,9 +44,9 @@ RUN git clone --recursive https://github.com/Snaipe/Criterion criterion \
              -DCMAKE_INSTALL_LIBDIR=lib \
              .. \
     && make install \
+    && ldconfig \
     && cd ../../ \
-    && rm -rf criterion \
-    && ldconfig
+    && rm -rf criterion
 
 # Install NormEZ.
 RUN git clone https://github.com/ronanboiteau/NormEZ NormEZ \
