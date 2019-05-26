@@ -3,7 +3,7 @@ from fedora
 # Install required packages and dependencies.
 RUN dnf -y install --allowerasing \
         make automake gcc-c++ cmake git gcovr ruby findutils valgrind expect \
-        ncurses-devel ncurses-compat-libs freetype-devel libXrandr-devel \
+        tcsh ncurses-devel ncurses-compat-libs freetype-devel libXrandr-devel \
         libX11-devel libudev-devel libogg-devel libglvnd-glx libvorbis-devel \
         flac-devel openal-soft-devel libglvnd-glx mesa-libGL-devel \
     && dnf clean all

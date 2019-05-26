@@ -2,7 +2,7 @@
 [![](https://images.microbadger.com/badges/version/adrienbrignon/epitech-c.svg)](https://hub.docker.com/r/adrienbrignon/epitech-c)
 [![](https://images.microbadger.com/badges/image/adrienbrignon/epitech-c.svg)](https://hub.docker.com/r/adrienbrignon/epitech-c)
 
-An { environment } for your Epitech projects.  
+An { environment } for your Epitech projects.
 Check out the [Docker Hub](https://hub.docker.com/r/adrienbrignon/epitech-c) for more informations.
 
 ## Base image
@@ -12,6 +12,7 @@ This image is based on [Fedora](https://hub.docker.com/_/fedora).
 ## Bundled packages
 
 - gcc
+- tcsh
 - ncurses
 - git
 - valgrind
@@ -27,5 +28,5 @@ This image is based on [Fedora](https://hub.docker.com/_/fedora).
 - [CSFML](https://github.com/SFML/CSFML)
 
 ## Contributing
-Pull requests are welcome.  
+Pull requests are welcome.
 For major changes, please open an issue first to discuss what you would like to change.
