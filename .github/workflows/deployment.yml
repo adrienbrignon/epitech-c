@@ -2,8 +2,6 @@ name: Deployment
 
 on:
   push:
-    branches:
-      - master
   schedule:
     - cron: '0 6 * * 0'
 
