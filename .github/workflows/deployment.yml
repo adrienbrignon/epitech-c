@@ -1,0 +1,21 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 6 * * 0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Publish image to GitHub registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: docker.pkg.github.com/adrienbrignon/epitech-c/epitech-c:latest
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        cache: ${{ github.event_name != 'schedule' }}
