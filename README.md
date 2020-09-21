@@ -3,29 +3,11 @@
 [![](https://images.microbadger.com/badges/image/adrienbrignon/epitech-c.svg)](https://hub.docker.com/r/adrienbrignon/epitech-c)
 
 An { environment } for your Epitech projects.
-Check out the [Docker Hub](https://hub.docker.com/r/adrienbrignon/epitech-c) for more informations.
+Check out the [Docker Hub](https://hub.docker.com/r/adrienbrignon/epitech-c) for more information.
 
 ## Base image
 
-This image is based on [Fedora](https://hub.docker.com/_/fedora).
-
-## Bundled packages
-
-- gcc
-- tcsh
-- ncurses
-- git
-- valgrind
-- make
-- cmake
-- expect
-- ruby
-- findutils
-- [criterion](https://github.com/Snaipe/Criterion)
-- [gcovr](https://github.com/gcovr/gcovr)
-- [NormEZ](https://github.com/ronanboiteau/NormEZ)
-- [SFML](https://github.com/SFML/SFML)
-- [CSFML](https://github.com/SFML/CSFML)
+This image is based on the [official image](https://github.com/Epitech/epitest-docker/) provided by Epitech.
 
 ## Contributing
 Pull requests are welcome.
